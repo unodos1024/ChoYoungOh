@@ -450,11 +450,23 @@ h2 {
     margin-top: 20px;
     border-radius: 4px;
     overflow: hidden;
+    background-color: #fff;
+    /* Ensure valid background for map */
+    color: #000;
+    /* Reset text color for map content */
+}
+
+/* Isolate map internals from global dark theme */
+.root_daum_roughmap * {
+    box-sizing: content-box;
+    /* Reset box model for map calculations */
+    color: #000;
 }
 
 .root_daum_roughmap .wrap_map {
     width: 100% !important;
-    height: auto !important;
+    height: 360px !important;
+    /* Enforce height */
 }
 
 /* Footer */
